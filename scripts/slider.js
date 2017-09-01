@@ -5,6 +5,7 @@ class Slider {
 		this.sliders = options.sliders
 		this.auoplay = options.autoplay
 		this.interval = options.interval || 3000
+		this.duration = options.duration || 300
 		this.index = 0
 		this.render()
 		this.start()
@@ -14,7 +15,7 @@ class Slider {
 		this.$el.innerHTML = `<div class="qq-slider-wrap"></div>`
 		this.$wrap = this.$el.firstElementChild
 		this.$wrap.style.width = `${this.sliders.length * 100}%`
-
+		this.$wrap.style.transitionDuration = `${this.duration}ms`
 		this.$wrap.innerHTML = this.sliders.map(slider =>
 			`<div class="qq-slider-item">
             <a href="${slider.link}"><img src="${slider.image}"></a>
@@ -29,15 +30,12 @@ class Slider {
 	}
 
 	next() {
-		//console.log(this.index)
 		this.index++
 		if (this.index === this.sliders.length) {
 			this.index = 0
 		}
 
-	let py = `${this.index / this.sliders.length * 100}`
+	   let py = `${this.index / this.sliders.length * 100}`
      this.$wrap.style.transform = `translate(-${py}%)`               
-
-    }
-
+		}	
 }

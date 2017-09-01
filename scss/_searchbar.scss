@@ -1,0 +1,86 @@
+.search-view {
+    margin: 10px;
+    font-size: $search-parent-font-size;
+}
+
+.qq-search-bar {
+    display: flex;
+}
+
+.input-wrap {
+    flex: 1;
+    position: relative;
+    background: $search-bg-color;
+    padding: 8px 12px 8px 35px;
+    .search-input {
+        height: $search-input-height;
+        line-height: $search-input-height;
+        width: 100%;
+        color: $search-input-color;
+        border: none;
+        font-size: $search-input-size;
+        &:focus {
+            outline: none;
+            #cancle-btn {
+                display: block;
+            }
+        }
+    }
+    .icon-search {
+        position: absolute;
+        top: 9px;
+        left: 10px;
+        width: 18px;
+        height: 18px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-indent: -999px;
+    }
+    .icon-delete {
+        position: absolute;
+        position: absolute;
+        top: 9px;
+        right: 12px;
+        width: 18px;
+        height: 18px;
+        background: #b1b1b1;
+        text-indent: -9999px;
+        border-radius: 99px;
+    }
+}
+
+#cancle-btn {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.hot-keys {
+    h3 {
+        color: $hot-keys-color;
+        margin-bottom: 8px;
+    }
+    .hot-tags {
+        display: flex;
+        flex-wrap: wrap;
+        .tag {
+            color: $hot-tag-color;
+            font-size: 14px;
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid $hot-keys-color;
+            padding: 0 10px;
+            border-radius: 99px;
+            margin-bottom: 10px;
+            margin-right: 14px;
+            &:first-child {
+                color: $hot-first-tag-color;
+                border-color: $hot-first-tag-color;
+            }
+        }
+    }
+}
+

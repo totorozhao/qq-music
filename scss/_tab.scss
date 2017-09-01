@@ -1,0 +1,31 @@
+.tab {
+    background: $tab-bg-color;
+    
+    .tab-list {
+        display: flex;
+        align-items: center;
+        .tab-item {
+            flex: 1;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            color: $tab-item-color;
+            height: $tab-item-height;
+            line-height: $tab-item-height;
+            &.active{
+                color: $tab-item-color-active;
+                -webkit-tap-highlight-color:transparent; // 避免闪烁
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 2px;
+                    background: $tab-item-color-active;
+                }
+            }
+        }
+    }
+}

@@ -14,11 +14,68 @@
 		<h1>QQ音乐</h1>
 		<img src="images/logo.png" id="logo">
 	</header>
- 
-	<div class="qq-slider" id="slider">
-		
+
+	<nav class="tab">
+		<ul class="tab-list">
+			<li data-role="tab" data-target=".rec-view" class="tab-item active">推荐</li>
+			<li data-role="tab" data-target=".rank-view" class="tab-item">排行榜</li>
+			<li data-role="tab" data-target=".search-view" class="tab-item">搜索</li>
+		</ul>
+	</nav>
+	<div class="tab-contents">
+		<div class="rec-view  hide">
+			<div class="qq-slider" id="slider"></div>
+			<div class="radios">
+				<h2 class="title">电台</h2>
+				<ul class="list"></ul>
+			</div>
+			<div class="songList">
+				<h2 class="title">电台</h2>
+				<ul class="list"></ul>
+			</div>
+
+		</div>
+		<div class="rank-view ">
+			<ul class="qq-toplist"></ul>
+		</div>
+		<div class="search-view hide">
+			<div class="qq-search-bar">
+				<div class="input-wrap">
+					<input type="search" id="search-input" class="search-input" placeholder="搜索歌曲、歌单、专辑">
+					<span class="icon-search">搜索</span>
+					<span class="icon-delete">取消</span>
+				</div>
+				<div id="cancle-btn" class="hide">取消</div>
+			</div>
+			<div class="hot-keys">
+				<h3>热门搜索</h3>
+				<div class="hot-tags">
+					<a href="#" class="tag">中国新歌声第二季</a>
+					<a href="#" class="tag">DJ舞曲(华语)系列5 DJ </a>
+					<a href="#" class="tag">紫</a>
+					<a href="#" class="tag">中国新歌声第二季</a>
+					<a href="#" class="tag">DJ舞曲(华语)系列5 DJ </a>
+					<a href="#" class="tag">紫</a>
+				</div>
+			</div>
+			<div class="focus-wrapper">
+				<div class="record-keys">
+
+				</div>
+				<div class="search-result">
+
+				</div>
+			</div>
+
+		</div>
 	</div>
-<script src="scripts/slider.js"></script>
-<script src="scripts/app.js"></script>
+
+
+
+	<script src="scripts/slider.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/tab.js"></script>
+	<script src="scripts/lazyload.js"></script>
 </body>
+
 </html>

@@ -3,7 +3,13 @@
 @import "var";
 @import "header";
 @import "slider";
+@import "tab";
+@import "helper";
+@import "rank";
+@import "searchbar";
 
 body{
+    height: 300000px;
     background:$body-background;
 }
+

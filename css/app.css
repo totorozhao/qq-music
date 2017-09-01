@@ -1,11 +1,81 @@
+.radios,
+.songList {
+  margin-bottom: 7px;
+  margin-left: 10px;
+  margin-right: 10px; }
+  .radios .title,
+  .songList .title {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 11px;
+    font-weight: normal; }
+  .radios ul.list,
+  .songList ul.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px; }
+    .radios ul.list .play-radio,
+    .songList ul.list .play-radio {
+      width: 50%;
+      padding-right: 8px;
+      margin-bottom: 10px; }
+      .radios ul.list .play-radio a,
+      .songList ul.list .play-radio a {
+        background-color: #fff;
+        display: block; }
+        .radios ul.list .play-radio a .list-media,
+        .songList ul.list .play-radio a .list-media {
+          position: relative;
+          margin-bottom: 5px; }
+          .radios ul.list .play-radio a .list-media img,
+          .songList ul.list .play-radio a .list-media img {
+            display: block;
+            width: 100%;
+            min-height: 145px; }
+          .radios ul.list .play-radio a .list-media .icon-play,
+          .songList ul.list .play-radio a .list-media .icon-play {
+            display: block;
+            position: absolute;
+            height: 24px;
+            bottom: 5px;
+            right: 5px;
+            width: 24px;
+            background-image: url(../images/list_sprite.png);
+            background-repeat: no-repeat;
+            background-size: 24px 60px; }
+        .radios ul.list .play-radio a .info,
+        .songList ul.list .play-radio a .info {
+          height: 36px;
+          padding: 0 7px 5px; }
+          .radios ul.list .play-radio a .info .info-title,
+          .songList ul.list .play-radio a .info .info-title {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: normal; }
+          .radios ul.list .play-radio a .info .author,
+          .songList ul.list .play-radio a .info .author {
+            font-size: 12px; }
+
 * {
   box-sizing: border-box; }
 
 body {
   margin: 0; }
 
-h1 {
-  margin: 0; }
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+input {
+  padding: 0; }
+
+a {
+  text-decoration: none; }
 
 #header {
   height: 44px;
@@ -20,10 +90,10 @@ h1 {
 
 .qq-slider {
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 14px; }
   .qq-slider .qq-slider-wrap {
-    display: flex;
-    transition: .3s; }
+    display: flex; }
   .qq-slider .qq-slider-item {
     flex-basis: 100%; }
     .qq-slider .qq-slider-item > a {
@@ -32,5 +102,148 @@ h1 {
         display: block;
         width: 100%; }
 
+.tab {
+  background: #fff; }
+  .tab .tab-list {
+    display: flex;
+    align-items: center; }
+    .tab .tab-list .tab-item {
+      flex: 1;
+      cursor: pointer;
+      text-align: center;
+      position: relative;
+      color: rgba(0, 0, 0, 0.6);
+      height: 40px;
+      line-height: 40px; }
+      .tab .tab-list .tab-item.active {
+        color: #31c27c;
+        -webkit-tap-highlight-color: transparent; }
+        .tab .tab-list .tab-item.active::after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: #31c27c; }
+
+.hide {
+  display: none; }
+
+.threedot {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.rank-view {
+  margin: 10px; }
+
+.qq-toplist .topic-item {
+  background: #fff;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  overflow: hidden; }
+  .qq-toplist .topic-item .topic-main {
+    display: block; }
+    .qq-toplist .topic-item .topic-main img {
+      display: block;
+      width: 100px;
+      height: 100px; }
+  .qq-toplist .topic-item .topic-info {
+    overflow: hidden; }
+    .qq-toplist .topic-item .topic-info .topic-wrap {
+      margin: 0 10px 0 15px; }
+      .qq-toplist .topic-item .topic-info .topic-wrap h3 {
+        font-size: 16px;
+        color: #000;
+        font-weight: normal;
+        margin-bottom: 5px; }
+      .qq-toplist .topic-item .topic-info .topic-wrap p {
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(0, 0, 0, 0.5); }
+      .qq-toplist .topic-item .topic-info .topic-wrap .title {
+        color: #000;
+        margin-left: 8px;
+        margin-right: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; }
+
+.search-view {
+  margin: 10px;
+  font-size: 12px; }
+
+.qq-search-bar {
+  display: flex; }
+
+.input-wrap {
+  flex: 1;
+  position: relative;
+  background: #fff;
+  padding: 8px 12px 8px 35px; }
+  .input-wrap .search-input {
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.3);
+    border: none;
+    font-size: 14px; }
+    .input-wrap .search-input:focus {
+      outline: none; }
+      .input-wrap .search-input:focus #cancle-btn {
+        display: block; }
+  .input-wrap .icon-search {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-indent: -999px; }
+  .input-wrap .icon-delete {
+    position: absolute;
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    background: #b1b1b1;
+    text-indent: -9999px;
+    border-radius: 99px; }
+
+#cancle-btn {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 14px;
+  height: 36px;
+  line-height: 36px; }
+
+.hot-keys h3 {
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 8px; }
+
+.hot-keys .hot-tags {
+  display: flex;
+  flex-wrap: wrap; }
+  .hot-keys .hot-tags .tag {
+    color: #000;
+    font-size: 14px;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    padding: 0 10px;
+    border-radius: 99px;
+    margin-bottom: 10px;
+    margin-right: 14px; }
+    .hot-keys .hot-tags .tag:first-child {
+      color: #fc4524;
+      border-color: #fc4524; }
+
 body {
+  height: 300000px;
   background: #f4f4f4; }

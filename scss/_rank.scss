@@ -1,0 +1,46 @@
+.rank-view {
+    margin: 10px;
+}
+
+.qq-toplist {
+    .topic-item {
+        background: $top-item-color;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        .topic-main {
+            display: block;
+            img {
+                display: block;
+                width: 100px;
+                height: $top-img-height;
+            }
+        }
+        .topic-info {
+            overflow: hidden;
+            .topic-wrap {
+                margin: 0 10px 0 15px;
+                h3 {
+                    font-size: $top-topic-font-size;
+                    color: $top-topic-color;
+                    font-weight: normal;
+                    margin-bottom: 5px;
+                }
+                p {
+                    font-size: $top-topic-p-font-size;
+                    line-height: 21px;
+                    color: $top-topic-p-color;
+                }
+                .title {
+                    color: $top-topic-color;
+                    margin-left: 8px;
+                    margin-right: 5px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+}
