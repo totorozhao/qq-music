@@ -1,22 +1,30 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     margin: 0;
-    
 }
-h1,h2,h3,p{
+
+h1,
+h2,
+h3,
+h6,
+p {
     margin: 0;
     padding: 0;
 }
-ul{
+
+ul {
     margin: 0;
     padding: 0;
-    list-style:none;
+    list-style: none;
 }
-input{
+
+input {
     padding: 0;
 }
+
 a {
     text-decoration: none;
 }

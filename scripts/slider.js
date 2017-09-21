@@ -1,4 +1,4 @@
-class Slider {
+export class Slider {
 
 	constructor(options = {}) {
 		this.$el = options.el
@@ -31,11 +31,11 @@ class Slider {
 
 	next() {
 		this.index++
-		if (this.index === this.sliders.length) {
-			this.index = 0
-		}
+			if (this.index === this.sliders.length) {
+				this.index = 0
+			}
 
-	   let py = `${this.index / this.sliders.length * 100}`
-     this.$wrap.style.transform = `translate(-${py}%)`               
-		}	
+		let py = `${this.index / this.sliders.length * 100}`
+		this.$wrap.style.transform = `translate(-${py}%)`
+	}
 }

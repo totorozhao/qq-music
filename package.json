@@ -12,12 +12,18 @@
   },
   "keywords": [],
   "author": {
-    "name":"Totorozhao",
-    "email":"jjzhao797@gmail.com"
+    "name": "Totorozhao",
+    "email": "jjzhao797@gmail.com"
   },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/totorozhao/qq-music/issues"
   },
-  "homepage": "https://github.com/totorozhao/qq-music#readme"
+  "homepage": "https://github.com/totorozhao/qq-music#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
 }
