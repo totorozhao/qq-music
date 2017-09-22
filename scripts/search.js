@@ -22,7 +22,7 @@ export class Search {
     this.history = new SearchHistory(el, this.$input, this)
   }
   onkeyup(event) {
-    window.addEventListener('scroll', this.onscroll)
+    //window.addEventListener('scroll', this.onscroll)
     let keyword = event.target.value.trim()
     this.history.showDelete()
     if (!keyword) {
@@ -43,6 +43,7 @@ export class Search {
   }
 
   search(keyword, page) {
+    window.addEventListener('scroll', this.onscroll)
     //if (this.keyWord === keyword && this.songs[this.page]) return   
     if (this.nomore || this.fetching) return // 没有更多 或者 正在加载中 返回
     if (this.keyWord !== keyword) this.reset()
